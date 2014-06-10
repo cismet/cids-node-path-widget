@@ -1,8 +1,8 @@
 angular.module(
-    'de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.controllers',
+    'de.cismet.cids.widgets.nodePathWidget.controllers',
     []
 ).controller(
-    'de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.controllers.ScenarioNodeEvolutionDirectiveController',
+    'de.cismet.cids.widgets.nodePathWidget.controllers.NodePathDirectiveController',
     [
         '$scope',
         'de.cismet.collidingNameService.Nodes',
