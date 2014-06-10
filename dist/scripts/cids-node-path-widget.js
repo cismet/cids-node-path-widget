@@ -8,9 +8,9 @@
 //)    
 //}]);
 // this only combines all the modules in a single one 
-angular.module('de.cismet.crisma.widgets.scenarioNodeEvolutionWidget', [
-  'de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.directives',
-  'de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.controllers',
+angular.module('de.cismet.cids.widgets.nodePathWidget', [
+  'de.cismet.cids.widgets.nodePathWidget.directives',
+  'de.cismet.cids.widgets.nodePathWidget.controllers',
   'de.cismet.cids.rest.collidngNames.Nodes'
 ]).controller('AppCtrl', [
   '$scope',
@@ -23,7 +23,7 @@ angular.module('de.cismet.crisma.widgets.scenarioNodeEvolutionWidget', [
     });
   }
 ]);
-angular.module('de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.controllers', []).controller('de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.controllers.ScenarioNodeEvolutionDirectiveController', [
+angular.module('de.cismet.cids.widgets.nodePathWidget.controllers', []).controller('de.cismet.cids.widgets.nodePathWidget.controllers.NodePathDirectiveController', [
   '$scope',
   'de.cismet.collidingNameService.Nodes',
   function ($scope, Nodes) {
@@ -62,7 +62,7 @@ angular.module('de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.controllers
     });
   }
 ]);
-angular.module('de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.directives', []).directive('scenarioNodeEvolutionWidget', function () {
+angular.module('de.cismet.cids.widgets.nodePathWidget.directives', []).directive('cidsNodePathWidget', function () {
   'use strict';
   return {
     scope: {
@@ -71,7 +71,7 @@ angular.module('de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.directives'
     },
     restrict: 'E',
     replace: true,
-    templateUrl: 'templates/ScenarioNodeEvolutionWidgetTemplate.html',
-    controller: 'de.cismet.crisma.widgets.scenarioNodeEvolutionWidget.controllers.ScenarioNodeEvolutionDirectiveController'
+    templateUrl: 'templates/CidsNodePathWidgetTemplate.html',
+    controller: 'de.cismet.cids.widgets.nodePathWidget.controllers.NodePathDirectiveController'
   };
 });
