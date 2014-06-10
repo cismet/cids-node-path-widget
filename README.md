@@ -1,4 +1,4 @@
-cids-node-evolution-widget
+cids-node-path-widget
 ==============================
 
 An angular based implementation that shows the path of a cids node up to the root node. 
