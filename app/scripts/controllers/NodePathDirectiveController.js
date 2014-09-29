@@ -8,11 +8,10 @@ angular.module(
         'de.cismet.collidingNameService.Nodes',
         function ($scope, Nodes) {
             'use strict';
-            var breadcrumbPathChanged = false, i;
+            var i;
             $scope.selectedBreadCrumbIndex = 0;
             $scope.loadWorldstate = function (index) {
                 $scope.selectedBreadCrumbIndex = index;
-                breadcrumbPathChanged = true;
                 $scope.selectedNode = $scope.breadCrumbPath[index];
             };
             $scope.isActive = function (index) {
@@ -20,11 +19,6 @@ angular.module(
             };
             $scope.breadCrumbPath = [];
             $scope.$watch('inputNode', function () {
-                if (breadcrumbPathChanged) {
-                    breadcrumbPathChanged = false;
-                    return;
-                }
-
                 //FIXME WE need a proper way to get the node corresponding to the Worldstate
                 if ($scope.inputNode && $scope.inputNode.key) {
                     var splittedLink = $scope.inputNode.key.split('.');
